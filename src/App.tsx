@@ -7,8 +7,8 @@ const card = {
   id: 0,
   title: 'todo1',
   description: 'todo1',
-  date:'12-23-2024',
-  assignTo:'Roger'
+  date: '12-23-2024',
+  assignTo: 'Roger'
 }
 
 const list = {
@@ -30,32 +30,52 @@ const list = {
 //Display Data (pas de props car parent) 
 const App = () => {
 
-const [data, setData] = useState([list]);
+  const [data, setData] = useState([list]);
 
-const [title, setTitle] = useState();
-const [Description, setDescription] = useState();
-
-
-const handleSubmit= (e:any) => {
-
-  list.items.push(card);
-  setData([list]);
-  
-  e.preventDefault();
-}
+  const [title, setTitle] = useState('');
+  const [Description, setDescription] = useState('');
 
 
+  const handleSubmit = (e: any) => {
 
-return (
-  <div className='row py-5 mx-auto'> 
-    { 
-      data.map((currentElement) => <div className='col-6'><List
-        id={currentElement.id} 
-        title={currentElement.title} 
-        items={currentElement.items} /></div>
-      ) 
-    }
-  </div>
+    list.items.push(card);
+    setData([list]);
+
+    e.preventDefault();
+  }
+
+
+
+  return (
+    <div className='row py-5 mx-auto'>
+      {
+        data.map((currentElement) => <div className='col-6'><List
+          id={currentElement.id}
+          title={currentElement.title}
+          items={currentElement.items} /></div>
+        )
+      }
+      <div className="row mx-auto">
+        <form>
+          <div className="form-group">
+            <label>Nom de la tâche : </label>
+            <input className="form-control" type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Description de la tâche : </label>
+            <textarea
+              value={Description}
+              onChange={(e) => setDescription(e.target.value)} className="form-control"></textarea>
+          </div>
+          <p>{title}</p>
+          <p>{Description}</p>
+        </form>
+      </div>
+    </div>
   );
 }
 
