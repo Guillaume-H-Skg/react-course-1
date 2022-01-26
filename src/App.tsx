@@ -4,11 +4,11 @@ import './bootstrap.min.css'
 
 //Create Data
 const card = {
-  // id: 0,
+  id: 0,
   title: 'todo1',
-  description: 'todo1',
+  //description: 'todo1',
   // date: '12-23-2024',
-  // assignTo: 'Roger'
+  assignTo: 'Roger'
 }
 
 const list = {
@@ -33,17 +33,18 @@ const App = () => {
   const [data, setData] = useState([list]);
 
   const [title, setTitle] = useState('');
-  const [Description, setDescription] = useState('');
+  const [AssignTo, setAssignTo] = useState('');
 
 
   const handleSubmit = (e: any) => {
     let card3 = {
-      // id: 0,
+      id: 0,
       title: title,
-      description: Description,
+      //description: 'todo1',
       // date: '12-23-2024',
-      // assignTo: 'Roger'
+      assignTo: AssignTo
     }
+
     list.items.push(card3);
     setData([list]);
 
@@ -73,12 +74,12 @@ const App = () => {
 
           <div className="form-group">
             <label>Description de la tâche : </label>
-            <textarea
-              value={Description}
-              onChange={(e) => setDescription(e.target.value)} className="form-control"></textarea>
+            <input type="text"
+              value={AssignTo}
+              onChange={(e) => setAssignTo(e.target.value)} className="form-control"/>
           </div>
           <p>{title}</p>
-          <p>{Description}</p>
+          <p>{AssignTo}</p>
           <button className='btn btn-primary'>Add Card</button>
         </form>
       </div>
