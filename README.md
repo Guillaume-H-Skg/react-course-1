@@ -1,4 +1,5 @@
-# React course 1 HUMBERT Guillaume LP WMCE
+# React course 1
+# HUMBERT Guillaume LP WMCE
 ## Getting started
 
 - Fork project to your personal repo
