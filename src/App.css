@@ -1,7 +1,6 @@
 .App{
-    background-color: rgba(255, 255, 255, 0.973);
-    /* width: 100vw;
-    height: 100vh; */
+    /* width: 100vw; */
+    min-height: 1000px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,5 +9,40 @@
 
 .max-w{
     min-width: 300px;
-    background-color: wheat;
+}
+
+.min-w-input{
+    max-width: 300px;
+  
+}
+
+.list-highlight {
+    background-color: #cacaca88;
+    border-radius: 20px;
+}
+
+.bar {
+    background-color: #61DBFB;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+}
+
+.background-img {
+    background-image: url(../public/fond.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    
+}
+
+.btn-react {
+    background-color: #61DBFB;
+    color: white;
+    border: white;
+}
+
+.bg-react {
+    background-color: #61DBFB;
+    color: white;
 }

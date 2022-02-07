@@ -6,3 +6,8 @@ export interface Todo {
     assignTo: string;
     isDone: boolean;
 }
+
+// export interface List {
+//     id:number;
+//     title: string;
+// }
