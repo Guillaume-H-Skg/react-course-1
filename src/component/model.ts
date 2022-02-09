@@ -1,5 +1,5 @@
 export interface Todo {
-    id: number;
+    id: string;
     todo: string;
     priority: string;
     date: string;
@@ -7,7 +7,8 @@ export interface Todo {
     isDone: boolean;
 }
 
-// export interface List {
-//     id:number;
-//     title: string;
-// }
+export interface List {
+    id: string;
+    title: string;
+    items : Todo[];
+}

@@ -1,5 +1,4 @@
 .App{
-    /* width: 100vw; */
     min-height: 1000px; 
     display: flex;
     flex-direction: column;
@@ -7,13 +6,8 @@
     color: rgb(0, 0, 0);
 }
 
-.max-w{
+.min-w-col{
     min-width: 300px;
-}
-
-.min-w-input{
-    max-width: 300px;
-  
 }
 
 .list-highlight {
@@ -33,7 +27,6 @@
     background-image: url(../public/fond.jpg);
     background-attachment: fixed;
     background-position: center;
-    
 }
 
 .btn-react {
