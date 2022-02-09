@@ -79,15 +79,15 @@ const App: React.FC = () => {
       switch (status) {
         case 'completed':
           setFilteredTodosList(
-            lists.map((list: any) => {
-              return {...list, items: list.items.filter((todo: any) => todo.isDone === true)}
+            lists.map((list: List) => {
+              return {...list, items: list.items.filter((todo: Todo) => todo.isDone === true)}
             })
           )
           break;
         case 'uncompleted':
           setFilteredTodosList(
-            lists.map((list: any) => {
-              return {...list, items: list.items.filter((todo: any) => todo.isDone === false)}
+            lists.map((list: List) => {
+              return {...list, items: list.items.filter((todo: Todo) => todo.isDone === false)}
             })
           )
           break;
