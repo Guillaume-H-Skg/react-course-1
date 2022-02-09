@@ -121,7 +121,7 @@ const TodoCard = ({ index, todo, setLists, lists }: Props) => {
                         <h5 className='card-text mb-3'><del>Priorité : {todo.priority}</del></h5>
                       </div>
                       <div className='d-flex flex-row-reverse'>
-                        <span className='btn btn-success btn-sm' onClick={() => handleDone(todo.id)} >Imcomplété</span>
+                        <span className='btn btn-success btn-sm' onClick={() => handleDone(todo.id)} >Décompléter</span>
                         <span className='btn btn-primary mx-2 disabled btn-sm'>Editer</span>
                         <span className='btn btn-danger btn-sm' onClick={() => handleDelete(todo.id)} >Supprimer</span>
                       </div>
@@ -136,7 +136,7 @@ const TodoCard = ({ index, todo, setLists, lists }: Props) => {
                         <h5 className='card-text mb-3'>Priorité : {todo.priority}</h5>
                       </div>
                       <div className='d-flex flex-row-reverse'>
-                        <span className='btn btn-success btn-sm' onClick={() => handleDone(todo.id)} >Complété</span>
+                        <span className='btn btn-success btn-sm' onClick={() => handleDone(todo.id)} >Compléter</span>
                         {edit ? (
                           <span className='btn btn-primary mx-2 disabled btn-sm'>Editer</span>
                         ) : (
