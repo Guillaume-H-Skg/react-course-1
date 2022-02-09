@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css'
 
 interface Props {
-    setStatus: any;
+    setStatus: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const FilterTask = ({ setStatus, }: Props) => {
